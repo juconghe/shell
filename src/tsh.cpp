@@ -22,10 +22,10 @@ void simple_shell::exec_command(char **argv)
 {
   // TODO: fork a child process to execute the command.
   // parent process should wait for the child process to complete and reap it
-  char **temp = argv;
-  while(*temp != NULL) {
-    printf("%s\n",*temp);
-    temp++;
+  while(*argv != NULL) {
+    printf("%s\n",*argv);
+    *argv = NULL;
+    *argv++;
   }
 }
 
