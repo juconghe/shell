@@ -10,6 +10,7 @@ int main(){
 	while (true){
 		cout << "tsh> ";
 		fgets(cmd, sizeof(cmd), stdin);
+		// printf("input is %s\n",cmd);
 		if (cmd[0] == '\n') continue;
 		shell->parse_command(cmd, cmdTokens);
 		if (shell->isQuit(*cmdTokens)){
