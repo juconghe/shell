@@ -14,6 +14,7 @@ int main(){
 		if (cmd[0] == '\n') continue;
 		shell->parse_command(cmd, cmdTokens);
 		if (shell->isQuit(*cmdTokens)){
+			// std::cout << "Exiting " << '\n';
 			exit(0);
 		}
 		else{
